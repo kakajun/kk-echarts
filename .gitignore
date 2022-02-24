@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+/dist
+/lib
+/option
+dist-ssr
+*.local
+yarn.lock

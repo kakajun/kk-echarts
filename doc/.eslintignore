@@ -1,0 +1,15 @@
+
+*.sh
+node_modules
+lib
+*.woff
+*.ttf
+.vscode
+.idea
+*.md
+./vue.config.js
+/build/
+/dist/
+/public/
+
+.vscode
