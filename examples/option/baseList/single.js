@@ -6,9 +6,9 @@ export default [
     icon: 'icon-flop',
     children: [
       {
-        label: '环形图',
+        label: '胶囊图',
         option: {
-          name: '环形图',
+          name: '胶囊图',
           icon: 'icon-icon2-73',
           top: 0,
           left: 0,

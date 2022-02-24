@@ -97,35 +97,6 @@ export default [
           }
         }
       },
-      // TODO  暂时隐藏, 不要删掉
-      {
-        label: '阿里图标',
-        option: {
-          name: '阿里图标',
-          icon: 'icon-biankuang',
-          top: 0,
-          left: 0,
-          lock: false, // 是不是加锁，阻止拖动
-          component: {
-            width: 240,
-            height: 240,
-            prop: 'shape'
-          },
-          option: {
-            dataType: 1,
-            preserveAspectRatio: 'xMinYMin',
-            fillColor: 'rgba(0, 0, 0, 1)',
-            remoteJSAddress: 'font_2402009_tukthf1j56.js',
-            url: '/iconfont/font_2402009_tukthf1j56.js',
-            iconName: 'iconRight-5',
-            openShadow: false, // 开启阴影
-            shadowColor: 'rgb(198, 198, 198)', // 阴影颜色
-            hShadow: 2, // 横偏移
-            vShadow: 2, // 纵偏移
-            blur: 5 // 模糊
-          }
-        }
-      },
       {
         label: '实时时间',
         option: {

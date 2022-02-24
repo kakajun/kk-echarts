@@ -353,101 +353,6 @@ export default [
         }
       },
       {
-        label: '柱形图-子公司',
-        option: {
-          name: '柱形图-子公司',
-          icon: 'icon-bar',
-          dataType: 1,
-          dataMethod: 'get',
-          comhidden: false,
-          data: basicDatas.bar,
-          lock: false, // 是不是加锁，阻止拖动
-          dataQuery: '{"period": "$year$month"}',
-          dataFormatter: '(function(data) { return data})',
-          url: '/cnbi/project/ocr_data/company_data',
-          time: 5,
-          component: {
-            width: 914, // 800,
-            height: 442, // 400,
-            prop: 'barSubCompany'
-          },
-          option: {
-            dataType: 'yysr',
-            currencyType: 10000,
-            digit: 2,
-            barColor: '#054a5a',
-            barFontColor: '#000000',
-            barFontSize: 15,
-            lineColor: '#ff0000',
-            lineFontSize: 25,
-            lineFontColor: '#f00'
-          }
-        }
-      },
-      {
-        label: '柱形图-房地产',
-        option: {
-          name: '柱形图-房地产',
-          icon: 'icon-bar',
-          dataType: 1,
-          dataMethod: 'post',
-          data: basicDatas.bar,
-          comhidden: false,
-          lock: false, // 是不是加锁，阻止拖动
-          dataQuery:
-            '{"period":"$year$month","type":"chart","project":"demo1","company":"$comid","cubeId":"6","unit":1,"ds":"nkdp_0616"}',
-          dataFormatter: '(function(data) { return data})',
-          url: '/cnbi/project/access/query',
-          time: 5,
-          component: {
-            width: 914, // 800,
-            height: 442, // 400,
-            prop: 'barFdc'
-          },
-          option: {
-            currencyType: 10000,
-            digit: 2,
-            legendFontSize: 25,
-            legendFontColor: '#4660CF',
-            legendTop: 40,
-            barColor: 'rgba(45, 172, 184, 1)',
-            barFontSize: 40,
-            barFontColor: '#FF8400',
-            lineFontSize: 28,
-            lineFontColor: '#ffc71d',
-            lineColor: '#ffc71d'
-          }
-        }
-      },
-      {
-        label: '仪表盘-完成、增减率',
-        option: {
-          name: '仪表盘-完成、增减率',
-          icon: 'icon-yibiaopan',
-          dataType: 1,
-          dataMethod: 'get',
-          data: basicDatas.bar,
-          comhidden: false,
-          lock: false, // 是不是加锁，阻止拖动
-          dataQuery: '{"period": "$year$month"}',
-          dataFormatter: '(function(data) { return data})',
-          url: '/cnbi/project/ocr_data/company_data',
-          time: 5,
-          component: {
-            width: 1021, // 800,
-            height: 549, // 400,
-            prop: 'bGauge2'
-          },
-          option: {
-            comp: '苏垦农发',
-            dType: '营业收入',
-            borderwidth: 22, // 外圈圆宽度
-            detailFontSize: 20,
-            detailColor: '#fff'
-          }
-        }
-      },
-      {
         label: '折线图',
         option: {
           name: '折线图',
@@ -535,43 +440,7 @@ export default [
           }
         }
       },
-      {
-        label: '折线图-增减趋势',
-        option: {
-          name: '折线图-增减趋势',
-          icon: 'icon-shujuzhexiantu',
-          dataType: 1,
-          dataMethod: 'post',
-          data: basicDatas.bar,
-          comhidden: false,
-          lock: false, // 是不是加锁，阻止拖动
-          dataQuery:
-            '{ "company":"$comid", "period":"$year$month", "items": ["1403100", "1416001", "1400111"] }',
-          dataFormatter: '(function(data) { return data})',
-          url: '/cnbi/project/ocr_data/important_indicator',
-          time: 5,
-          component: {
-            width: 914, // 800,
-            height: 442, // 400,
-            prop: 'lineZZQS'
-          },
-          option: {
-            startPeriod: '本期',
-            lineColors: ['#4a7eba', '#bd4a47', '#97b856'],
-            lineWidth: 2,
-            xAxisFontColor: '#707070',
-            xAxisFontSize: 14,
-            xAxisFontDblLine: false,
-            yAxisFontColor: '#707070',
-            yAxisFontSize: 14,
-            legendFontColor: '#000000',
-            legendFontSize: 25,
-            legendBottom: 35,
-            xAxisAxisLabelRotate: 0,
-            gridBottom: 120
-          }
-        }
-      },
+
       {
         label: '饼图',
         option: {
@@ -625,64 +494,7 @@ export default [
           }
         }
       },
-      {
-        label: '饼图2',
-        option: {
-          name: '饼图2',
-          icon: 'icon-bingtu',
-          dataType: 1,
-          dataMethod: 'post',
-          time: 5,
-          comhidden: false,
-          lock: false, // 是不是加锁，阻止拖动
-          dataQuery:
-            '{"period":"$year$month","type":"chart","project":"demo1","company":"$comid","cubeId":"3","unit":1,"ds":"nkdp_0616"}',
-          dataFormatter: '(function(data) { return data})',
-          url: '/cnbi/project/access/query',
-          data: basicDatas.pie2,
-          resize: false,
-          component: {
-            width: 914,
-            height: 442,
-            prop: 'pie2'
-          },
-          option: {
-            legendDataIcon: 'rect',
-            currencyType: 10000,
-            digit: 2,
-            // ['#2ec7c9', '#b6a2de', '#ffb980', '#5ab1ef'],
-            pieColors: [
-              'rgba(46, 199, 201, 1)',
-              'rgba(182, 162, 222, 1)',
-              'rgba(255, 185, 128, 1)',
-              'rgba(90, 177, 239, 1)'
-            ],
-            titlePostion: 'center',
-            titleShow: true,
-            titleColor: 'rgba(72, 109, 253, 1)',
-            titleFontSize: 26,
-            subtext: '产业发展情况',
-            subTitleFontSize: 21,
-            subTitleColor: 'rgba(108, 74, 45, 1)',
-            legend: true,
-            legendColor: 'rgba(165, 147, 135, 1)',
-            legendFontSize: 18,
-            legendOrient: 'horizontal',
-            legendPostion: 'S',
-            lblBGColor: 'rgba(238, 238, 238, 1)',
-            lbltitleColor: 'rgba(114, 82, 54, 1)',
-            lbltitleFontSize: 20,
-            lblUnitColor: 'rgba(114, 82, 54, 1)',
-            lblUnitFontSize: 15,
-            lblZBKanjiColor: 'rgba(114, 82, 54, 1)',
-            lblZBKanjiFontSize: 15,
-            lblKaneColor: 'rgba(251, 204, 94, 1)',
-            lblKaneFontSize: 20,
-            lblPercentColor: 'rgba(251, 204, 94, 1)',
-            lblPercentFontSize: 20
-          }
-        }
-      },
+
       {
         label: '雷达图',
         option: {
@@ -873,96 +685,7 @@ export default [
           }
         }
       },
-      //   {
-      //     label: '3/4环形图',
-      //     option: {
-      //
-      //       name: '3/4环形图',
-      //       icon: 'icon-huanxingtu',
-      //       dataType: 1,
-      //       dataMethod: 'post',
-      //       comhidden: false,
-      //       lock: false, // 是不是加锁，阻止拖动
-      //       dataQuery:
-      //         '{"period":"$year$month","type":"chart","project":"demo1","company":"$comid","cubeId":"3","unit":1,"ds":"nkdp_0616" }',
-      //       dataFormatter: '(function(data) { return data})',
-      //       url: '/cnbi/project/access/query', // bbaseUrl + "/threefourthsround",
-      //       data: basicDatas.threefourthsround,
-      //       component: {
-      //         width: 914,
-      //         height: 442,
-      //         prop: 'threefourthsround',
-      //
-      //       },
-      //       option: {
-      //         dType: '营业收入',
-      //         digit: 2,
-      //         pieSeriesColors: [
-      //           'rgba(255, 135, 0, 1)',
-      //           'rgba(0, 228, 115, 1)',
-      //           'rgba(255, 195, 0, 1)',
-      //           'rgba(0, 157, 255, 1)'
-      //         ], // 前景色
-      //         bgColor: 'rgba(0, 0, 0, 0)', // '#fff', //背景色
-      //         // 标签说明的位置
-      //         lbltop: 0, // 16,//'22.7',
-      //         lblbottom: 69, // 55,//'54',
-      //         lblleft: 32, // "30",
-      //         // 标签整体背景
-      //         lbltotalBgColor: 'rgba(0,0,0,0)',
-      //         // 标签线设置
-      //         lineWidth: 0, // 170,
-      //         lineHeight: 0, // 10,
-      //         // 各个不同的标签文字的颜色,大小
-      //         nameColor: 'rgba(46, 123, 250, 1)',
-      //         nameBgColor: 'rgba(0,0,0,0)',
-      //         nameFontsize: 25,
-      //         bdColor: 'rgba(46, 123, 250, 1)',
-      //         bdBgColor: 'rgba(0,0,0,0)',
-      //         bdFontsize: 23,
-      //         percentColor: 'rgba(46, 123, 250, 1)',
-      //         percentBgColor: 'rgba(0,0,0,0)',
-      //         percentFontsize: 28,
-      //         valueColor: 'rgba(46, 123, 250, 1)',
-      //         valueBgColor: 'rgba(0,0,0,0)',
-      //         valueFontsize: 36,
-      //         unitColor: 'rgba(46, 123, 250, 1)',
-      //         unitBgColor: 'rgba(0,0,0,0)',
-      //         unitFontsize: 27,
-      //         currencyType: 100000000,
-      //         // ↓ 农业特殊展示
-      //         nameFamingEnabled: true,
-      //         nameColorFaming: 'rgba(255, 225, 0, 1)',
-      //         nameBgColorFaming: 'rgba(52, 122, 193, 1)',
-      //         nameFontsizeFaming: 33,
-      //         bdColorFaming: 'rgba(255, 225, 0, 1)',
-      //         bdBgColorFaming: 'rgba(52, 122, 193, 1)',
-      //         bdFontsizeFaming: 33,
-      //         percentColorFaming: 'rgba(255, 225, 0, 1)',
-      //         percentBgColorFaming: 'rgba(52, 122, 193, 1)',
-      //         percentFontsizeFaming: 33,
-      //         valueColorFaming: 'rgba(255, 225, 0, 1)',
-      //         valueBgColorFaming: 'rgba(52, 122, 193, 1)',
-      //         valueFontsizeFaming: 33,
-      //         unitColorFaming: 'rgba(255, 225, 0, 1)',
-      //         unitBgColorFaming: 'rgba(52, 122, 193, 1)',
-      //         unitFontsizeFaming: 33,
-      //         // ↑ 农业特殊展示 end
-      //         textShadowEnabled: false, // 文字阴影start
-      //         textShadowColor: 'rgba(255, 0, 0, 1)',
-      //         textShadowBlur: 5,
-      //         textShadowOffsetX: 10,
-      //         textShadowOffsetY: 10,
-      //         textShadowFamingEnabled: false,
-      //         textShadowColorFaming: 'rgba(255, 0, 0, 1)',
-      //         textShadowBlurFaming: 5,
-      //         textShadowOffsetXFaming: 10,
-      //         textShadowOffsetYFaming: 10,
-      //         lblPaddingTop: 26,
-      //         sideLeft: false // 开口朝向
-      //       }
-      //     }
-      //   },
+
       {
         label: '双轴图',
         option: {
@@ -1137,80 +860,7 @@ export default [
           }
         }
       },
-      {
-        label: '追跑图',
-        option: {
-          name: '追跑图',
-          icon: '',
-          dataType: 0, // 1,
-          dataMethod: 'post',
-          // "data": basicDatas.aniBar,
-          dataQuery: '{"year":"2020","item":""}',
-          dataFormatter: '(function(data) { return data})',
-          // url: '/api/query_farming/query_sowing',
-          url: '/cnbi/project/access/query',
-          data: basicDatas.Anibar,
-          time: 5,
-          component: {
-            width: 1672,
-            height: 674,
-            prop: 'anibar'
-          },
-          option: {
-            curyear: 2014, // new Date().getFullYear() - 11,
-            endyear: 2019, // new Date().getFullYear() - 1,
-            updateFrequency: 1200,
-            nkColor: '#08903e',
-            colorList: [
-              '#00ffff',
-              '#e30606',
-              '#b940c1',
-              '#fbb700',
-              '#1200fd',
-              '#fc00c4',
-              '#ff7f21',
-              '#e4ff00',
-              '#5010af',
-              '#556fb5',
-              '#f19ec2',
-              '#22ac38',
-              '#f29b76',
-              '#8a8000',
-              '#7e0043',
-              '#59493f',
-              '#286270',
-              '#003567',
-              '#ac6a00',
-              '#fb2a8c',
-              '#fd4b5a',
-              '#ff3f2c',
-              '#00ffff',
-              '#e30606',
-              '#b940c1',
-              '#fbb700',
-              '#1200fd',
-              '#fc00c4',
-              '#ff7f21',
-              '#e4ff00',
-              '#5010af',
-              '#556fb5',
-              '#f19ec2',
-              '#22ac38',
-              '#f29b76',
-              '#8a8000',
-              '#7e0043',
-              '#59493f',
-              '#286270',
-              '#003567',
-              '#ac6a00',
-              '#fb2a8c',
-              '#fd4b5a',
-              '#ff3f2c'
-            ],
-            dataType: '1403100'
-          }
-        }
-      },
+
       {
         label: '地图',
         option: {
@@ -1337,58 +987,7 @@ export default [
           }
         }
       },
-      {
-        label: '3D金字塔',
-        option: {
-          name: '3D金字塔',
-          icon: 'icon-tubiaozhizuomoban',
-          data: [],
-          dataFormatter: '',
-          component: {
-            rotateDeg: 0,
-            width: 800,
-            height: 500,
-            prop: 'pyramid'
-          },
-          option: {
-            borderWidth: 1,
-            adCode: 13e4,
-            mapLevel: 0,
-            mapStyle: 'dark',
-            openArea: !1,
-            showBorder: !1,
-            drillDown: !1,
-            open3d: !1,
-            openCustomColor: !1,
-            mapType: 2,
-            intensity: 3,
-            radius: 10,
-            opacity: 1,
-            scale: 87,
-            type: 0,
-            bubble: {
-              enable: !1,
-              size: {
-                field: 'value',
-                values: [3, 20]
-              }
-            },
-            borderColor: '#0dffff',
-            areaColor: '#061d33',
-            cityStroke: '#EBCCB4',
-            banner: !0,
-            bannerTime: 3e3,
-            fontSize: 14,
-            show: !0,
-            center: '104.288144,36.239692',
-            zoom: 3,
-            pitch: 0,
-            empAreaColor: 'rgba(35, 183, 229, 0.42)',
-            empColor: '#fff',
-            color: 'rgba(13, 255, 255, 1)'
-          }
-        }
-      },
+
       {
         label: '通用型',
         option: {
@@ -1408,44 +1007,6 @@ export default [
             currencyType: 1,
             percentile: true, // 千分位显示
             digitalCount: 2 // 两位小数
-          }
-        }
-      },
-      {
-        label: '飞行图',
-        option: {
-          name: '飞行图',
-          icon: '',
-          data: basicDatas.bar,
-
-          time: 5,
-          component: {
-            width: 400,
-            height: 200,
-            prop: 'flaymap'
-          },
-          option: {
-            animations: [], // 动画
-            allDelayTime: 0, // 整体播放时长
-            isOnceAnimation: true, // true 动画执行一次 false 无线循环
-            legend: true,
-            title: '模拟迁徙',
-            subtext: '数据纯属虚构',
-            borderWidth: 3,
-            scale: 87,
-            type: 0,
-            borderColor: '#0dffff',
-            areaColor: '#061d33',
-            fontSize: 12,
-            zoom: 1.2,
-            empAreaColor: 'rgba(35, 183, 229, 0.42)',
-            empColor: '#fff',
-            color: 'rgba(13, 255, 255, 1)',
-            tipColor: 'red',
-            tipBackgroundColor: 'rgba(0,0,0,.5)',
-            tipFontSize: 16,
-            mapData: '/cnbi/project/map/detail?mapid=305',
-            chinaData: null
           }
         }
       }
