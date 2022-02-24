@@ -204,7 +204,7 @@ export default [
         }
       },
       {
-        label: '线条',
+        label: '计数器',
         option: {
           name: '线条',
           icon: 'icon-fuwenben',
@@ -214,20 +214,9 @@ export default [
             rotateDeg: 0,
             width: 400,
             height: 50,
-            prop: 'countup'
+            prop: 'avuecountup'
           },
           option: {
-            id: 'FnpZs4',
-            animations: [], // 动画
-            allDelayTime: 0, // 整体播放时长
-            isOnceAnimation: true, // true 动画执行一次 false 无线循环
-            style: 'solid', // 线条样式
-            color: '#000', // 线条颜色
-            width: 2, // 线条宽度
-            points: ['', 'arrow'],
-            start: [0, 0],
-            end: [549, 0],
-            direction: 'x'
           }
         }
       }

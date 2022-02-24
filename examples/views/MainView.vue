@@ -4,7 +4,7 @@
     <el-header class="top">
       <el-row>
         <el-col :span="12">
-          <div class="top-content">组件案例库</div>
+          <div class="top-content">组件库</div>
         </el-col>
       </el-row>
     </el-header>
@@ -17,11 +17,6 @@
       <!-- 内容区 -->
       <el-main>
         <div v-if="activeObj.option" class="wrapper__grade">
-          <!-- <el-button @click="display = !display">点击</el-button>
-          <div ref="avuecountup">
-            <AvueCountUp :end="50000" v-if='display'></AvueCountUp>
-          </div> -->
-
           <!-- <avue-crud :option="option" :data="data"></avue-crud> -->
           <!-- <avue-radio v-model="selectData" :dic="selectList"></avue-radio> -->
           <div
@@ -40,6 +35,12 @@
             <el-button type="text" @click="visibleDia = true"
               >点击打开 Dialog</el-button
             >
+            <AvueCountUp
+              v-if="activeObj.component.prop === 'avuecountup'"
+              :end="50000"
+              :style="copustyle"
+            ></AvueCountUp>
+
             <!-- <MonacoEditor :editorValue="activeObj.code" @change="onChange" /> -->
             <!-- <editor
               v-if="activeObj.component.prop === 'editor' && visibleDia"
@@ -332,15 +333,6 @@ export default {
       this.activeOption.chinaData = JSON.parse(data)
     }
     this.flag = true
-  },
-  mounted() {
-    this.$refs.avuecountup.addEventListener(
-      'DOMSubtreeModified',
-      function () {
-        console.log('列表中子元素被修改')
-      },
-      false
-    )
   },
   methods: {
     onChange(val) {
