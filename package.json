@@ -55,7 +55,6 @@
     "stylelint-scss": "3.20.1",
     "vite": "2.5.3",
     "vite-plugin-element-plus": "^0.0.12",
-    "vite-plugin-monaco-editor": "1.0.5",
     "vue": "^3.2.19",
     "vue-template-compiler": "2.6.14"
   }
