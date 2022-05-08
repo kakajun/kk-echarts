@@ -12,6 +12,7 @@ const prefix = 'monaco-editor/esm/vs'
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   return {
+    base: './',
     plugins: [
       vue(),
       //由于cdn不会被打包进dist目录,所以这里特殊copy一下,为什么cdn不放到pulic里面呢?因为我lib和option都不需要cdn
