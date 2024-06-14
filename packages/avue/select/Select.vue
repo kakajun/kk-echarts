@@ -1,7 +1,7 @@
 <template>
   <el-select
     ref="main"
-    v-model="value"
+    :value="value"
     class="avue-select"
     :size="size"
     :multiple="multiple"

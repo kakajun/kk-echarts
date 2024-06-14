@@ -1,7 +1,7 @@
 <template>
   <div class="avue-radio">
     <el-radio-group
-      v-model="value"
+      :value="value"
       :size="size"
       :disabled="disabled"
       @change="handleChange"

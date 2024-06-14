@@ -38,14 +38,11 @@ import AvueEchartProgress from '@e/progress'
 import AvueEchartPictorialbar from '@e/pictorialbar'
 import AvueEchartRadar from '@e/radar'
 import AvueEchartScatter from '@e/scatter'
-// import AvueEchartAnibar from '@e/anibar'
-// import AvueEchartMap from '@e/map'
 import AvueEchartLiquidfill from '@e/liquidfill'
 import AvueEchartLiquidfillfull from '@e/liquidfillFull' // 水球图充满
 import AvueEchartPyramid from '@e/pyramid'
 // // picText组件库
 import AvueEchartText from '@p/picText/texta'
-// import AvueEchartShape from '@p/picText/shape'
 import AvueEchartDatetime from '@p/picText/datetime'
 import AvueEchartFontset from '@p/picText/fontSet' // 炫彩文本
 import AvueEchartImgborder from '@p/picText/imgborder'
@@ -69,11 +66,6 @@ import Draggable from '@p/avue/draggable/Draggable.vue'
 // 工具区的公共组件
 import AvueContentmenu from '@t/common/contentmenu.vue'
 import AvueDragbox from '@t/common/dragBox.vue'
-import AvueSketchRule from '@t/common/sketch-rule.vue'
-// import Manydims from '@t/manyDims'
-// import Measureselect from '@t/measureSelect'
-// import AvueEchartTable from '@p/other/table' // 表格
-// import AvueEchartBtn from '@p/avue/btn' // 表格
 
 /* 被迫提升的avue3个别组件,因为整体升级难度太大 */
 import AvueSelect from '@p/avue/select'
@@ -93,7 +85,6 @@ const prototypes = {
 }
 function install(app) {
   const packages = [
-    // AvueEchartShape,
     AvueEchartBar,
     AvueEchartStackbar,
     AvueEchartBiaxial,
@@ -109,8 +100,6 @@ function install(app) {
     AvueEchartRadar,
     AvueEchartScatter,
     AvueEchartLiquidfill,
-    // AvueEchartAnibar,
-    // AvueEchartMap,
     AvueEchartLiquidfillfull,
     AvueEchartPyramid,
     AvueEchartProgresscircle,
@@ -129,19 +118,12 @@ function install(app) {
     // // 百度地图组件
     AvueEchartFlaymap,
     AvueEchartTabs,
-
     Animationedit,
     Animationlunbo,
-
     AvueCrud,
     Companytree,
     AvueContentmenu,
     AvueDragbox,
-    AvueSketchRule,
-    // Manydims,
-    // Measureselect,
-    // AvueEchartTable,
-    // AvueEchartBtn,
     AvueSelect,
     AvueInputNumber,
     AvueRadio,
@@ -167,7 +149,6 @@ export {
   divCommon,
   runAnimations,
   CubeChartFormater,
-  // AvueEchartShape,
   AvueEchartBar,
   AvueEchartStackbar,
   AvueEchartBiaxial,
@@ -183,8 +164,6 @@ export {
   AvueEchartRadar,
   AvueEchartScatter,
   AvueEchartLiquidfill,
-  // AvueEchartAnibar,
-  // AvueEchartMap,
   AvueEchartLiquidfillfull,
   AvueEchartPyramid,
   AvueEchartProgresscircle,
@@ -208,16 +187,10 @@ export {
   Companytree,
   AvueContentmenu,
   AvueDragbox,
-  // SketchRule,
-  // Manydims,
-  // Measureselect,
-  // AvueEchartTable,
-  // AvueEchartBtn,
   AvueSelect,
   AvueInputNumber,
   AvueRadio,
-  Draggable,
-  AvueSketchRule
+  Draggable
 }
 export default {
   version,
