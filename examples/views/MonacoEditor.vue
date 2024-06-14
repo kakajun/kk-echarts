@@ -51,7 +51,7 @@ onMounted(() => {
   editor = monaco.editor.create(container.value!, {
     language: language.value,
     value: editorValue.value,
-    theme: isDark ? 'vs-dark' : 'vs'
+    theme: isDark.value ? 'vs-dark' : 'vs'
   })
 
   emit('change', editorValue)

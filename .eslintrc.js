@@ -1,51 +1,23 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
-  env: {
-    browser: true,
-    node: true
-  },
-  plugins: ['prettier'],
+  root: true,
   extends: [
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/prettier'
+    '@vue/eslint-config-typescript/recommended',
+    '@vue/eslint-config-prettier'
   ],
-  parserOptions: {
-    ecmaVersion: 2020
+  env: {
+    'vue/setup-compiler-macros': true
   },
+  plugins: ['prettier'],
   rules: {
-    // js/ts
-    'vue/no-mutating-props': 'off', // 不能改对象?
-    'no-unused-vars': 'off',
-    'no-redeclare': 'off',
-    'no-console': 'off',
-    // 'no-console': ['warn', { allow: ['warn', 'error'] }],
-    'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
-    camelcase: ['error', { properties: 'never' }],
-    //允许 $emit
-    'vue/require-explicit-emits': [
-      'error',
-      {
-        allowProps: true
-      }
-    ],
-    'no-var': 'error',
-    'prefer-const': [
-      'warn',
-      { destructuring: 'all', ignoreReadBeforeAssign: true }
-    ],
-    'object-shorthand': [
-      'error',
-      'always',
-      { ignoreConstructors: false, avoidQuotes: true }
-    ],
-    'block-scoped-var': 'error',
-    complexity: ['off', 11],
-    'no-with': 'error',
-    'no-void': 'error',
-    // vue
-    'vue/no-v-html': 'off',
-    'vue/require-default-prop': 'off',
-    'prettier/prettier': 'warn'
+    'comma-dangle': 'off',
+    'vue/valid-v-slot': 'off',
+    'vue/multi-word-component-names': 'off',
+    '@typescript-eslint/comma-dangle': 'off',
+    'prettier/prettier': 'off'
   }
 }
