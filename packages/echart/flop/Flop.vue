@@ -74,7 +74,7 @@
 
 <script>
 import common from '@s/mixins/common.js'
-import { currencyF, vaildData, setPx } from '@s/utils/util.js'
+import {  vaildData, setPx } from '@s/utils/util.js'
 import CountUp from '@p/picText/countUp/CountUp.vue'
 export default {
   name: 'Flop',

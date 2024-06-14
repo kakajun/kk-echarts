@@ -6,7 +6,7 @@
 import common from '@s/mixins/common.js'
 import { deepClone, vaildData } from '@s/utils/util.js'
 export default {
-  name: 'Line',
+  name: 'Linea',
   mixins: [common],
   mounted() {
     // alert('msg')

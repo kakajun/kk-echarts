@@ -3,8 +3,7 @@
     <div class="home-wepper">
       <div class="banner">
         <div class="bg-wrapper">
-          <div class="bg-wrapper"
-               id="smoky-bg">
+          <div class="bg-wrapper" id="smoky-bg">
             <canvas>Your browser does not support HTML5 canvas.</canvas>
           </div>
         </div>
@@ -14,7 +13,15 @@
                  src="images/logo.png"
                  alt="">
           </div> -->
-          <div style="background-color:rgba(255,255,255,.1);color:#fff;font-weight:bold;padding:40px 20px;border-radius:10px">
+          <div
+            style="
+              background-color: rgba(255, 255, 255, 0.1);
+              color: #fff;
+              font-weight: bold;
+              padding: 40px 20px;
+              border-radius: 10px;
+            "
+          >
             <div class="introduce">
               <p>一个基于avue和echart的前端图形展示外置组件库</p>
               <span>
@@ -26,29 +33,28 @@
               <a href="https://avuejs.com/doc/installation">avue官方文档</a>
             </p>
             <div class="button-wrapper">
-              <router-link class="home-button"
-                           to="/doc/dev/getting-started">
+              <router-link class="home-button" to="/doc/dev/getting-started">
                 文档查阅
               </router-link>
             </div>
           </div>
         </div>
       </div>
-      <div class="home-page-wrapper  page1">
+      <div class="home-page-wrapper page1">
         <div class="home-page">
           <div class="page1-content">
             <div class="page1-item">
-              <a href="#"
-                 class="page1-item-link">
+              <a href="#" class="page1-item-link">
                 <div class="page1-item-title">
                   <h2>快速展现</h2>
-                  <p>提供现成的图形可视化私有库，插件引入导入配置，图形快速生成。</p>
+                  <p>
+                    提供现成的图形可视化私有库，插件引入导入配置，图形快速生成。
+                  </p>
                 </div>
               </a>
             </div>
             <div class="page1-item">
-              <a href="#"
-                 class="page1-item-link">
+              <a href="#" class="page1-item-link">
                 <div class="page1-item-title">
                   <h2>差异配置</h2>
                   <p>针对不同需求，支持修改配置快速达到想要效果。</p>
@@ -56,8 +62,7 @@
               </a>
             </div>
             <div class="page1-item">
-              <a href="#"
-                 class="page1-item-link">
+              <a href="#" class="page1-item-link">
                 <div class="page1-item-title">
                   <h2>可视化操作</h2>
                   <p>支持可视化配置图形参数，简单配置，无需记参数。</p>
@@ -74,12 +79,9 @@
 <script>
 export default {
   name: 'home',
-  components: {
-
-  },
+  components: {},
   data() {
-    return {
-    }
+    return {}
   },
   created() {},
   mounted() {
@@ -96,9 +98,9 @@ export default {
       drawsPerFrame: 10,
       lineWidth: 2,
       speed: 10,
-      bgColorInner: '#00a680',
+      bgColorInner: '#00a680'
     })
-  },
+  }
 }
 </script>
 

@@ -62,9 +62,6 @@ export default {
                 borderRadius: 4,
                 show: this.option.labelShow ?? true,
                 position: 'outside',
-                // 'outside'饼图扇区外侧，通过视觉引导线连到相应的扇区。
-                // 'inside' 饼图扇区内部。
-                // 'center'
                 formatter: p => {
                   // console.log(p, 'p')
                   // (p) => this.funformatterPie(p), // + '({d})%', //'{c}({d})%',

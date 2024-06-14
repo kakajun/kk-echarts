@@ -150,7 +150,7 @@ export default {
                 textStyle: {
                   fontSize: 18
                 },
-                formatter(a, b) {
+                formatter(a) {
                   return a.name
                 }
               }

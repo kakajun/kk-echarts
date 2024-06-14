@@ -41,7 +41,7 @@ export default {
           ],
           indicator: optionData.indicator || [],
           shape: this.option.shape || 'polygon',
-          // radius: this.option.titleShow ? '60%' : this.option.radius || '75%'
+
           radius: this.option.radiusW ? this.option.radiusW + '%' : '70%'
         },
         series: (() => {

@@ -8,7 +8,7 @@ const banner = `/*!
 * 由产品展现部制作
 */`
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(() => {
   return {
     plugins: [vue()],
     resolve: {
@@ -27,7 +27,6 @@ export default defineConfig(({ command, mode }) => {
         entry: resolve(__dirname, 'src/option.js'),
         name: 'option',
         fileName: 'option'
-        // formats: ['umd', 'es']
       },
       rollupOptions: {
         // 确保外部化处理那些你不想打包进库的依赖

@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Iframe',
+  name: 'Iframea',
   inject: ['main']
 }
 </script>

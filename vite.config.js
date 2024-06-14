@@ -5,7 +5,7 @@ import copy from 'rollup-plugin-cpy'
 import VitePluginElementPlus from 'vite-plugin-element-plus'
 const prefix = 'monaco-editor/esm/vs'
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({  mode }) => {
   return {
     base: './',
     plugins: [

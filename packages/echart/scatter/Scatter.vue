@@ -29,7 +29,7 @@ export default {
       let option = {
         title: this.title(),
         grid: this.grid(),
-        // legend: this.legend(),
+ 
         animation: this.animation,
         xAxis: this.xAxis(),
         yAxis: this.yAxis(),

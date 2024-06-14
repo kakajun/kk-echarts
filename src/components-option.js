@@ -27,7 +27,6 @@ import ImgborderOption from '@p/picText/imgborder/Option.vue'
 import FontsetOption from '@p/picText/fontSet/Option.vue'
 import DatetimeOption from '@p/picText/datetime/Option.vue'
 import VideoOption from '@p/picText/video/Option.vue'
-// import ShapeOption from '@p/picText/shape/Option.vue'
 import OdometerOption from '@p/picText/odometer/Option.vue'
 import SwiperOption from '@p/picText/swiper/Option.vue'
 import TextOption from '@p/picText/texta/Option.vue'
@@ -46,7 +45,6 @@ const list = {
   MainOption,
   RightOption,
   // echart组件库
-  // ShapeOption,
   BarOption,
   StackbarOption,
   BiaxialOption,

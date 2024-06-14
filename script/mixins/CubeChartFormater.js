@@ -123,7 +123,7 @@ class CubeChart {
         const tempArrs = []
         const tempa1 = obj.data
         // 这里按二级横标分类排序一下
-        newArray.forEach((name, i) => {
+        newArray.forEach((name) => {
           tempa1.forEach(ele => {
             if (ele[id] === name) {
               tempArrs.push(ele)
@@ -202,8 +202,6 @@ class CubeChart {
         console.error("两个度量展示没有扩充需求,没有写解析")
       }
       const legendArrs = Array.from(new Set(this.chartDatas.map(item => item[this.legendId]))) // 去重
-
-
       // 设置indicator
       const id = this.dimId
       const temparr = this.chartDatas.map(item => item[id])
@@ -242,7 +240,6 @@ class CubeChart {
       }
     } else {
       // 没有legend
-
       // 设置indicator
       const id = this.dimId
       const temparr = this.chartDatas.map(item => item[id])

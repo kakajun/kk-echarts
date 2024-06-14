@@ -51,14 +51,7 @@
       <el-color-picker v-model="main.activeOption.borderColor" show-alpha>
       </el-color-picker>
     </el-form-item>
-    <!-- <el-form-item label="波浪透明度">
-      <avue-input-number :minRows="1"
-                         :maxRows="100"
-                         v-model="main.activeOption.waterOpacity"></avue-input-number>
-    </el-form-item> -->
-    <!-- <el-form-item label="水颜色1">
-      <el-color-picker  show-alpha v-model="main.activeOption.waterColor1">
-    </el-form-item> -->
+
     <el-form-item label="波浪宽度">
       <avue-input-number
         v-model="main.activeOption.waterWidth"

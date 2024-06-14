@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <Header ref="header"
-            :class="{'home-header':$route.path==='/'}"></Header>
+    <Header
+      ref="header"
+      :class="{ 'home-header': $route.path === '/' }"
+    ></Header>
     <router-view ref="main" />
     <Footer v-if="!$route.path.includes('/doc')"></Footer>
   </div>
@@ -13,27 +15,28 @@ import Footer from '@/components/Footer'
 export default {
   components: {
     Header,
-    Footer,
+    Footer
   },
   data() {
     return {
       //   reload: false,
     }
   },
-  created() {
-  },
+  created() {},
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll() {
       var scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop
       if (scrollTop <= 1000) {
         this.$refs.header.height = scrollTop * 0.1
       }
-    },
-  },
+    }
+  }
 }
 </script>
 <style lang="scss">

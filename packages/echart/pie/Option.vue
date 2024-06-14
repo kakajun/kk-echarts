@@ -2,10 +2,6 @@
   <div>
     <slot></slot>
     <el-collapse accordion>
-      <!-- <el-form-item label="标签百分比显示">
-        <el-switch v-model="main.activeOption.yaxisLabelPecent">
-        </el-switch>
-      </el-form-item> -->
       <el-collapse-item title="饼图设置">
         <el-form-item label="设置为环形">
           <el-switch v-model="main.activeOption.radius"></el-switch>

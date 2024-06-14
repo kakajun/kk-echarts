@@ -137,7 +137,7 @@ export default {
   },
   watch: {
     data: {
-      handler(val) {
+      handler() {
         this.updateData()
       },
       deep: true

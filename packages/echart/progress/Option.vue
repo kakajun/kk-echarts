@@ -55,11 +55,7 @@
         >
         </el-option>
       </el-select>
-      <!-- <el-select
-        v-model="main.activeOption.suffixFontWeight"
-        style="width:100%;"
-        :dic="dicOption.fontWeight">
-      </el-select> -->
+
     </el-form-item>
     <el-form-item label="字体大小">
       <el-input-number
@@ -70,9 +66,7 @@
         :max="200"
       ></el-input-number>
     </el-form-item>
-    <!-- <el-form-item label="字体颜色">
-      <el-color-picker v-model="main.activeOption.color"></el-color-picker>
-    </el-form-item> -->
+ 
     <el-form-item label="文字粗细">
       <el-select v-model="main.activeOption.fontWeight" placeholder="">
         <el-option

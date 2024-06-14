@@ -16,9 +16,6 @@
       <el-color-picker v-model="main.activeOption.borderColor" show-alpha>
       </el-color-picker>
     </el-form-item>
-    <!-- <el-form-item label="波浪颜色">
-      <el-color-picker  show-alpha v-model="main.activeOption.shadowColor">
-    </el-form-item> -->
   </div>
 </template>
 
